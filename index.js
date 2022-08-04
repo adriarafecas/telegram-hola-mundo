@@ -6,7 +6,8 @@ const bot = new Telebot({
 });
 
 bot.on(["/start", "/hola"], (msg) => {
-    bot.sendMessatge(msg.chat.id, 'Hola ${msg.chat.username} bienvenido a tu primer bot')
+    console.log(msg);
+    bot.sendMessage(msg.chat.id, `${msg.chat.first_name} el teu dispositiu ha detectat un virus`)
 })
 
 bot.start();
